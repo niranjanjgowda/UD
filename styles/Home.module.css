@@ -43,15 +43,13 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-
-  max-width: 800px;
   margin-top: 3rem;
 }
 
 .card {
   margin: 1rem;
   flex-basis: 45%;
-  padding: 1.5rem;
+  padding-top: 1.5rem;
   text-align: left;
   color: inherit;
   text-decoration: none;
@@ -62,7 +60,21 @@
     border-color 0.15s ease;
 }
 
-.card:hover,
+.card a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card p+p {
+  margin: 0;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  color: #a44343;
+  text-align: center;
+  background-color: #0070f3;
+  border-radius: 0 0 10px 10px;
+}
+
 .card:focus,
 .card:active {
   color: #0070f3;
@@ -70,18 +82,68 @@
 }
 
 .card h3 {
-  margin: 0 0 1rem 0;
+  margin: 0 1.5rem 1rem 1.5rem;
   font-size: 1.5rem;
+
+}
+
+.card img{
+  display: none;
+}
+
+.card:focus img,
+.card:active img{
+  display: block;
+  max-height: 200px;
+  width: 100%;
+  object-fit: contain;
+  height: auto;
 }
 
 .card p {
-  margin: 0;
+  margin: 0 1.5rem 0 1.5rem;
   font-size: 1.25rem;
   line-height: 1.5;
 }
 
 .logo {
   height: 1em;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+}
+
+.navbarLeft {
+  display: flex;
+  align-items: center;
+}
+
+.navbarTitle {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbarRight {
+  display: flex;
+}
+
+.navbarLink {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1rem;
+  padding: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.navbarLink:hover {
+  background-color: #555;
 }
 
 @media (max-width: 600px) {
